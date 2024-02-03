@@ -17,10 +17,15 @@ export default function Meals() {
     }
     fetchMeals();
   }, []);
-  console.log(loadedMeals)
+  const namesArray = []
+  loadedMeals.map((meal) => {
+    namesArray.push(meal.name)
+  })
   return (
     <ul id="meals">
-        {setLoadedMeals && loadedMeals[3].name}
+        {namesArray.map((meal) => 
+          <li key={meal}>{meal}</li>
+        )}
     </ul>
   );
 }
