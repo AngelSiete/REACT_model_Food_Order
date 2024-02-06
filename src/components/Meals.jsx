@@ -22,7 +22,6 @@ export default function Meals() {
   loadedMeals.map((meal) => {
     foodArray.push(meal)
   })
-  console.log(foodArray)
   return (
     <ul id="meals">
         {foodArray.length > 1 && foodArray.map((meal) => 
