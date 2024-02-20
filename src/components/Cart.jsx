@@ -25,7 +25,7 @@ export default function Cart(){
             <p className="total">{totalFormatted}</p>
             <p className="modal-actions">
                 <Button onClick={handleCloseCart}>Close</Button>
-                <Button onClick={handleCloseCart}>Checkout</Button>
+                {cartCtx.items.length > 0 && <Button onClick={handleCloseCart}>Checkout</Button>}
             </p>
         </Modal>
     )
